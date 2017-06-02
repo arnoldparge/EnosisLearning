@@ -76,14 +76,14 @@
     <script>
 
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady(), false);
+            document.addEventListener("deviceready", onDeviceReady(), true);
         }
 
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("backbutton", onBackKeyDown(), false);
+            document.addEventListener("backbutton", onBackKeyDown(), true);
         }
 
         // Handle the back button
