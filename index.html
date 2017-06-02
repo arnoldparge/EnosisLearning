@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <style>
+        ._heading {
+            background-color: #063f77;
+            height: 50px;
+            font-size: 30px;
+            color: white;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            box-shadow: gray 0 0 15px 5px;
+            z-index: 5;
+        }
+
+        ._footer {
+            background-color: #063f77;
+            height: 50px;
+            font-size: 30px;
+            color: white;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            box-shadow: gray 0 0 15px 5px;
+            z-index: 5;
+        }
+
+        ._btnEnq {
+            float: right;
+        }
+
+        ._btnBack {
+            float: right;
+        }
+
+        ._body {
+            margin: 20px;
+        }
+
+        .panel {
+            margin-bottom: 10px !important;
+        }
+
+        .panel-heading {
+            background-color: #337ab7 !important;
+            color: white !important;
+        }
+
+        .panel-body {
+            background-color: skyblue;
+            font-size: large;
+            box-shadow: gray 0 5px 15px 5px inset;
+        }
+
+        ._page2 {
+            background-color: #e5e5e5;
+            height: 520px;
+            /*box-shadow:gray 0 0 15px 5px;*/
+            padding: 20px;
+            font-size: large;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $("._btnBack").hide();
+            $("._page2").hide();
+
+            $("._btnEnq").click(function () {
+                $("._btnEnq").fadeOut(500);
+                $("._page1").fadeOut(500);
+                setTimeout(function () {
+                    $("._btnBack").fadeIn(500);
+                    $("._page2").fadeIn(500);
+                }, 500);
+            });
+
+            $("._btnBack").click(function () {
+                $("._btnBack").fadeOut(500);
+                $("._page2").fadeOut(500);
+                setTimeout(function () {
+                    $("._btnEnq").fadeIn(500);
+                    $("._page1").fadeIn(500);
+                }, 500);
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <div class="_heading">
+        <span style="margin-left: 10px">Enosis Learning</span>
+        <a class="_btnEnq btn btn-primary">Enquiry</a>
+        <a class="_btnBack btn btn-primary">Back</a>
+    </div>
+
+    <div style="height: 50px;"></div>
+
+    <div class="_body _page1">
+
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">C#, ADO.Net, ASP.Net, HTML & Jquery</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">ASP.Net MVC, EF, LINQ, Jquery & Angular js</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Web Designing ( HTML, CSS, HTML5, CSS3, Photoshop, Illustrator, Responsive Design, Javascript )</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">SQL SERVER 2012</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">MSBI 2012 ( SSIS, SSRS, SSAS )</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Software Testing</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Selenium</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">C Language</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">C++ Language</a>
+                    </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Java Course Content</a>
+                    </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                        This is an example of an Accordion. This is an example of an Accordion. This is an example of an Accordion. 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="_body _page2">
+
+        <div class="row">
+            <div class="col-xs-4">
+                Name:
+            </div>
+            <div class="col-xs-8">
+                <input id="txtName" class="form-control" type="text" />
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-xs-4">
+                Email:
+            </div>
+            <div class="col-xs-8">
+                <input id="txtMail" class="form-control" type="email" />
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-xs-4">
+                Query:
+            </div>
+            <div class="col-xs-8">
+                <textarea id="txtQuery" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-xs-4">
+                Mobile:
+            </div>
+            <div class="col-xs-8">
+                <input id="txtMobile" class="form-control" type="number" />
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <div style="width: 100%; text-align: center">
+            <input id="btnSubmitEnq" class="btn btn-primary" style="width: 80%;" type="button" value="button" />
+        </div>
+
+        <br />
+
+    </div>
+
+</body>
+</html>
