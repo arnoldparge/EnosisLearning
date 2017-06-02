@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/cordova.js"></script>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -69,7 +70,21 @@
     </style>
 
     <script>
+
         $(document).ready(function () {
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            function onDeviceReady() {
+                // Register the event listener
+                document.addEventListener("backbutton", onBackKeyDown, false);
+            }
+
+            // Handle the back button
+            //
+            function onBackKeyDown(e) {
+                e.preventDefault();
+            }
 
             $("._btnBack").hide();
             $("._page2").hide();
@@ -93,6 +108,7 @@
             });
 
         });
+
     </script>
 
 </head>
