@@ -71,17 +71,24 @@
 
     <script>
 
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            // Register the event listener
+            document.addEventListener("backbutton", onBackKeyDown, false);
+        }
+
+        // Handle the back button
+        //
+        function onBackKeyDown() {
+            alert("back pressed");
+        }
+
         $(document).ready(function () {
-
-            document.addEventListener("deviceready", onDeviceReady(), false);
-
-            function onDeviceReady() {
-                document.addEventListener("backbutton", onBackClickEvent(), false);
-            }
-
-            function onBackClickEvent() {
-                alert("back onBackClickEvent");
-            }
 
             $("._btnBack").hide();
             $("._page2").hide();
@@ -109,7 +116,7 @@
     </script>
 
 </head>
-<body>
+<body onload="onLoad()">
     <div class="_heading">
         <span style="margin-left: 10px">Enosis Learning</span>
         <a class="_btnEnq btn btn-primary">Enquiry</a>
