@@ -76,14 +76,14 @@
     <script>
 
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady(), false);
         }
 
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.addEventListener("backbutton", onBackKeyDown(), false);
         }
 
         // Handle the back button
@@ -121,6 +121,8 @@
 
 </head>
 <body onload="onLoad()">
+
+    <!--HEADER-->
     <div class="_heading">
         <span style="margin-left: 10px">Enosis Learning</span>
         <a class="_btnEnq btn btn-primary">Enquiry</a>
@@ -129,6 +131,7 @@
 
     <div style="height: 50px;"></div>
 
+    <!--PAGE-1-->
     <div class="_body _page1">
 
         <div class="panel-group" id="accordion">
@@ -277,6 +280,7 @@
 
     </div>
 
+    <!--PAGE-2-->
     <div class="_body _page2">
 
         <div class="row">
@@ -331,12 +335,6 @@
 
     </div>
 
-    <script>
-
-        
-
-
-    </script>
 
 </body>
 </html>
