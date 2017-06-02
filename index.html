@@ -71,14 +71,6 @@
 
     <script>
 
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            document.addEventListener("backbutton", function (e) {
-                alert("back pressed");
-                e.preventDefault();
-            });
-        }
-
         $(document).ready(function () {
 
             $("._btnBack").hide();
@@ -317,6 +309,18 @@
         <br />
 
     </div>
+
+    <script>
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            document.addEventListener("backbutton", function (e) {
+                e.preventDefault();
+                alert("back pressed");
+            });
+        }
+
+    </script>
 
 </body>
 </html>
