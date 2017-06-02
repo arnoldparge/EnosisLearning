@@ -73,6 +73,16 @@
 
         $(document).ready(function () {
 
+            document.addEventListener("deviceready", onDeviceReady(), false);
+
+            function onDeviceReady() {
+                document.addEventListener("backbutton", onBackClickEvent(), false);
+            }
+
+            function onBackClickEvent() {
+                alert("back onBackClickEvent");
+            }
+
             $("._btnBack").hide();
             $("._page2").hide();
 
@@ -312,15 +322,7 @@
 
     <script>
 
-        document.addEventListener("deviceready", onDeviceReady(), false);
-
-        function onDeviceReady() {
-            document.addEventListener("backbutton", onBackClickEvent(), false);
-        }
-
-        function onBackClickEvent() {
-            alert("back onBackClickEvent");
-        }
+        
 
 
     </script>
